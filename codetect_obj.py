@@ -35,7 +35,7 @@ tf.flags.DEFINE_float("holdout1", "0.0", "first object not to use during trainin
 tf.flags.DEFINE_float("holdout2", "1.0", "second object not to use during training")
 
 
-MAX_ITERATION = int(50001)
+MAX_ITERATION = int(20001)
 
 image_size = downscaleImages.image_size
 num_color_channels = downscaleImages.num_color_channels
@@ -319,7 +319,7 @@ def loss_function_selector(logits, labels, coords, logits2, logits3, keylabels, 
 
   #return [[newmeanIoULoss + newmeanAllImgsIoULoss + newmeanKeyImageIouLoss + newmeanVectorSpreadError, tf.constant(1.0)]]
 
-  #return [[kgcIoU+kgcAllImgs+kgcKeyImage, tf.constant(1.0)]] #+kgcVectorSpread,
+  #return [[kgcIoU+kgcAllImgs+kgcKeyImage+kgcVectorSpread, tf.constant(1.0)]]
   #return [[(0.4*meanIoULoss) + (0.2*meanAllImgsIoULoss) + (0.2*meanKeyImageIouLoss) + (0.01*meanVectorSpreadError), tf.constant(1.0)]] # (0.01*meanVectorSpreadError) + (0.1*meanBinarizationError)
   return [[meanIoULoss, tf.constant(1.0)]]
   #return [[meanAllImgsIoULoss, tf.constant(1.0)]]
