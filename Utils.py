@@ -150,6 +150,8 @@ target_subdir = "target"
 
 def read_folder(folder1, folder2, HOLDOUT_OBJECT_DURING_TRAINING):
 
+  HOLDOUT_OBJECT_DURING_TRAINING = None #TODO CHANGE THIS
+
   results = list()
   for folder in [folder1, folder2]:
     inputdir = os.path.join(folder, image_subdir)
