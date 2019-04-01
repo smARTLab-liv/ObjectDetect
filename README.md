@@ -6,9 +6,9 @@ The code in this repository provides an implementation for the methods discussed
 
 To run the program using the ObjectDetection@Work dataset, a preprocessed dataset can be obtained from:
 
-[Mirror 1](https://cgi.csc.liv.ac.uk/~gpalmer/ObjectDetectionAtWork_Preprocessed.tar.gz)
-Filesize: 11.9 GB
-md5sum: b6f2e2ee7ad747eeb4edaa4a7c2593aa
+[Mirror 1](https://cgi.csc.liv.ac.uk/~gpalmer/ObjectDetectionAtWork_Preprocessed.tar.gz)<br>
+Filesize: 11.9 GB<br>
+md5sum: b6f2e2ee7ad747eeb4edaa4a7c2593aa<br>
 
 Upon downloading an extracting the dataset, the framework can be run directly via:
 
@@ -18,4 +18,4 @@ where holdout1 and holdout2 represent the indexes belonging to the holdout objec
 
 Alternatively, the following script can be run to test each holdout combination:
 
-        run_many_tests.sh
+	run_many_tests.sh
