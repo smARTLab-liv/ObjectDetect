@@ -18,14 +18,8 @@ from distanceFunctions import *
 FLAGS = tf.flags.FLAGS
 tf.flags.DEFINE_string("logs_dir", "logs/", "path to logs directory")
 
-tf.flags.DEFINE_string("data_dir", "trainingData/allData/", "path to dataset")
-tf.flags.DEFINE_string("valid_dir", "newEvaluationSet/", "path to evaluation dataset")
-
-#tf.flags.DEFINE_string("data_dir", "trainingData/testMultiObj/", "path to dataset")
-#tf.flags.DEFINE_string("valid_dir", "trainingData/testMultiObj/", "path to evaluation dataset")
-
-#tf.flags.DEFINE_string("data_dir", "trainingData/testMultiObj2/", "path to dataset")
-#tf.flags.DEFINE_string("valid_dir", "trainingData/testMultiObj2_valid/", "path to evaluation dataset")
+tf.flags.DEFINE_string("data_dir", "RoboCupAtWork_Preporcessed/train/", "path to dataset")
+tf.flags.DEFINE_string("valid_dir", "RoboCupAtWork_Preporcessed/eval/", "path to evaluation dataset")
 
 tf.flags.DEFINE_float("learning_rate", "1e-5", "Learning rate for Adam Optimizer")
 tf.flags.DEFINE_bool('logProgress', "False", "evaluates every 1000 steps or so on the entire eval set, writes the accurracy into a file")
